@@ -38,7 +38,7 @@ var gotResult = function()
 {
     console.log('STT :: End translation');
     var obj = require(tmpFolder + "recognized.json");
-//    console.log(obj);
+//  console.log(obj);
     if (obj.status == 0)
     {
 	var text = obj.hypotheses[0].utterance;
