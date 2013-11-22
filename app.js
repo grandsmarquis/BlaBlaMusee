@@ -13,10 +13,12 @@ ID = 0;
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var moderation = require('./routes/moderation');
+var info = require('./routes/info');
 var http = require('http');
 var path = require('path');
+
+twitts = ["Ceci est un test", "ceci est un test2", "ceci est un test3"];
 
 var stt = require('./stt.js');
 
@@ -43,8 +45,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.get('/moderation', moderation.index);
+app.get('/info', info.index);
+app.get('/about', info.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
