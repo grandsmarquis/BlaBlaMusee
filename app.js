@@ -1,5 +1,13 @@
 
 /**
+ * Global variables
+ */
+recordTime = 2; //Recording time in seconds                                                                          
+language = "fr/FR" //Speech language                                                                                 
+tmpFolder = "./tmp/" // Path to store tmp things. Could be "/tmp/blabla" to be more Linux friendly!                  
+ID = 0;
+
+/**
  * Module dependencies.
  */
 
@@ -8,6 +16,8 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+
+var stt = require('./stt.js');
 
 var app = express();
 
