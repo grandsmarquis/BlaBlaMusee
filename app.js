@@ -1,15 +1,15 @@
 
 /**
- * Global variables
- */
+** Global variables
+**/
 recordTime = 2; //Recording time in seconds                                                                          
 language = "fr/FR" //Speech language                                                                                 
 tmpFolder = "./tmp/" // Path to store tmp things. Could be "/tmp/blabla" to be more Linux friendly!                  
 ID = 0;
 
 /**
- * Module dependencies.
- */
+** Module dependencies.
+**/
 
 var express = require('express');
 var routes = require('./routes');
@@ -33,7 +33,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
+app.use(express.cookieParser('theKeyyouneed2411190'));
 app.use(express.session());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));

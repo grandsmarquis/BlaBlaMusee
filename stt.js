@@ -1,11 +1,13 @@
 
 
+/*
+** Extern class members
+*/
 
-function puts(error, stdout, stderr) { console.log(stdout + stderr + error);     console.log('STT :: END recording'); }
+function puts(error, stdout, stderr) { console.log(stdout + stderr + error);     console.log('STT :: END recording')}
 
 var stt = module.exports = function()
 {
-
 }
 
 var execute = function(cmd, callback)
@@ -19,6 +21,10 @@ stt.prototype.startProcess = function()
     console.log('STT :: Start recording');
     execute("rm -v " + tmpFolder + "wewe.wav "  + tmpFolder + "wewe2.wav " + tmpFolder + "message.flac " + tmpFolder+ "recognized.json ; arecord -d5 -f dat -t wav -r 48000 -c 2 > " + tmpFolder + "wewe.wav;", convert);
 }
+
+/*
+** Inner class use functions
+*/
 
 var convert = function()
 {
