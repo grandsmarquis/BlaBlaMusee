@@ -4,6 +4,7 @@ Creer un espace de Blabla dans un musée.
 
 ## Technologies
 
+Le projet utilise principalement nodeJS (backend) et ExpressJS (frontend).
 
 ## Usage
 
