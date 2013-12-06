@@ -21,14 +21,12 @@ start = function()
 
 addMsg = function(msg)
 {
-    content = document.getElementById('messages');
-    var html = '';
+    content = document.createElement('div');
     for (var i = 0; i < messages.length; i++)
     {
-	html += '<br>' + messages[i] + '</br>';
-
+	content.innerHtml += '<br>' + msg + '</br>';
 	console.log('updated items');
     } 
-    content.innerHtml = (html);
+    document.body.appendChild(content);
     // To do code to add the message to the queue!
 }

@@ -16,6 +16,12 @@ Cloner le repertoire git, installer les modules nécessaires à git ainsi que le
 git clone git@github.com:jdourlens/BlaBlaMusee.git
 ```
 
+Les dépendances de bases sont:
+* nodejs
+* expressjs
+
+Il faut installer les modules node listés dans le fichier package.json.
+
 ```
 cd BlaBlaMusee && sudo node install
 ```
@@ -25,6 +31,8 @@ Les dépendances pour le traitement du son sont:
 * flac
 * arecord
 * wget
+
+arecord et wget sont inclus de base dans la plus grande partie des distributions Linux.
 
 Le chemin vers le dossier temporaire (tmpFolder) défini dans app.js doit etre existant.
 
@@ -45,6 +53,8 @@ Pour obtenir les informations, visitez:
 ```
 
 ## Equipe
+
+
 
 ## License
 
