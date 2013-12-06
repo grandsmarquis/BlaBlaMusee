@@ -26,6 +26,8 @@ Les dépendances pour le traitement du son sont:
 * arecord
 * wget
 
+Le chemin vers le dossier temporaire (tmpFolder) défini dans app.js doit etre existant.
+
 ### Utilisation
 
 ```

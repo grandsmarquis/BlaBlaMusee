@@ -7,14 +7,21 @@
     <link rel='stylesheet' href='/stylesheets/blabla.css' />
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src='javascripts/bootstrap.min.js'></script>
+    <script src='javascripts/socket.io.js'></script>
+    <script src='javascripts/blabla.js'></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+<% if (physical_button == false) { %>
+<button type="button" onclick="start()" class="btn btn-default">Start</button>
+<% } %>
+<div id="messages">
     <ul>
-      <% for(var i=0; i<twitts.length; i++) {%>
+      <% for(var i=0; i<twitts.length; i++) { %>
 	 <li><%= twitts[i] %></li>
 	 <% } %>      
     </ul>
+</div>
   </body>
 </html>

@@ -43,7 +43,15 @@ var doResult = function()
 var gotResult = function()
 {
     console.log('STT :: End translation');
-    var obj = require(tmpFolder + "recognized.json");
+    try { 
+	var obj = require(tmpFolder + "recognized.json");
+    }
+    catch (error)
+    {
+	console.log('STT :: ERROR :: Google returned nothing, maybe bad internet connection or no identified sound');
+	console.log('STT :: ERROR :: See details : ' + error);
+	return;
+    }
 //  console.log(obj);
     if (obj.status == 0)
     {

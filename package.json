@@ -1,7 +1,7 @@
 {
   "name": "BlaBla-Musee",
   "desciption" : "Creer des espaces de BlaBla dans les musees.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -10,6 +10,7 @@
     "express": "3.4.4",
     "ejs": "*",
     "stylus": "*",
-    "twitter": "*"
+    "twitter": "*",
+    "socket.io": "*"
   }
 }

@@ -4,9 +4,10 @@
 **/
 recordTime = 2; //Recording time in seconds                                                                          
 language = "fr/FR" //Speech language                                                                                 
-tmpFolder = "./tmp/" // Path to store tmp things. Could be "/tmp/blabla" to be more Linux friendly!                  
+tmpFolder = "/tmp/" // Path to store tmp things. Could be "/tmp/blabla" to be more Linux friendly!                  
 ID = 0;
-
+physical_button = false;
+socket_port = 4040;
 /**
 ** Module dependencies.
 **/
@@ -17,10 +18,34 @@ var moderation = require('./routes/moderation');
 var info = require('./routes/info');
 var http = require('http');
 var path = require('path');
+var stt = require('./stt.js');
+STT = new stt();
+io = require('socket.io').listen(socket_port);
+
+io.sockets.on('connection', function(socket)
+	      {
+		  console.log('Client Connected');
+		  socket.on('start', function(s)
+			    {
+				console.log('Received \'start\' event');
+				socket.emit('msg', 'ceci est un test');
+//				STT.startProcess();
+			    });
+		  socket.on('quit', function(socket)
+			    {
+			    });
+		  socket.on('changelanguage', function(socket)
+			    {
+			    });
+		  socket.on('moderation', function(socket)
+			    {
+			    });
+	      });
+
+
 
 twitts = ["Ceci est un test", "ceci est un test2", "ceci est un test3"];
 
-var stt = require('./stt.js');
 
 var app = express();
 
