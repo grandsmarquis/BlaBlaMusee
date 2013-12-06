@@ -1,4 +1,6 @@
-
+/*
+** Under GPL - 2013 - Jules Dourlens <jdourlens@gmail.com>
+*/
 
 /*
 ** Extern class members
