@@ -38,6 +38,5 @@ addMsg = function(msg)
     }
     console.log(anchor.firstChild);
     document.body.insertBefore(content, anchor.nextSibling);
-
     // To do code to add the message to the queue!
 }

@@ -55,6 +55,7 @@ var gotResult = function()
 	console.log('STT :: ERROR :: See details : ' + error);
 	return;
     }
+//  Debug before sending to webClient
 //  console.log(obj);
     if (obj.status == 0)
     {
