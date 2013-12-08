@@ -4,6 +4,9 @@
 
 messages = [];
 
+var first = true;
+var i = 0;
+
 console.log('Loading blabla.js');
 socket = io.connect('http://127.0.0.1:' + 4040);
 socket.on('msg', function(data)
@@ -21,12 +24,20 @@ start = function()
 
 addMsg = function(msg)
 {
-    content = document.createElement('div');
-    for (var i = 0; i < messages.length; i++)
+    i++;
+    content = document.createElement('h1');
+    console.log(content);
+    node = document.createTextNode(msg + ' ' + i);
+    content.appendChild(node);
+    anchor = document.getElementById('messages');
+    if (first)
     {
-	content.innerHtml += '<br>' + msg + '</br>';
-	console.log('updated items');
-    } 
-    document.body.appendChild(content);
+	fakecontent = document.createElement('div');
+	anchor.appendChild(fakecontent);
+	first = false;
+    }
+    console.log(anchor.firstChild);
+    document.body.insertBefore(content, anchor.nextSibling);
+
     // To do code to add the message to the queue!
 }

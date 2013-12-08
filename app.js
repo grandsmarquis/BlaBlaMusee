@@ -11,6 +11,7 @@ tmpFolder = "/tmp/" // Path to store tmp things. Could be "/tmp/blabla" to be mo
 ID = 0;
 physical_button = false;
 socket_port = 4040;
+
 /**
 ** Module dependencies.
 **/

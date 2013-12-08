@@ -45,7 +45,8 @@ var doResult = function()
 var gotResult = function()
 {
     console.log('STT :: End translation');
-    try { 
+    try
+    { 
 	var obj = require(tmpFolder + "recognized.json");
     }
     catch (error)
