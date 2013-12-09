@@ -62,7 +62,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('theKeyyouneed2411190'));
+app.use(express.cookieParser('theKeyyouneedButWontFind'));
 app.use(express.session());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
